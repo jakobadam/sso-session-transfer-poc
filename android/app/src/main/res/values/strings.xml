@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Auth0 WebAuth KT</string>
+
+    <string name="com_auth0_client_id">REPLACE_WITH_AUTH0_ANDROID_CLIENT_ID</string>
+    <string name="com_auth0_domain">REPLACE_WITH_AUTH0_TENANT</string>
+    
+    <string name="com_auth0_scheme">demo</string>
+</resources>

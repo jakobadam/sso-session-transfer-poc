@@ -9,10 +9,11 @@ It consists of:
 - A native iOS application and a native Android application that authenticates with Auth0 and renders an authenticated
   webview, from the webapp above, without prompting the user for re-login.
 
-| Included apps | SSO                              |
-|---------------|----------------------------------|
-| Android       | via shared cookies               |
-| iOS           | via query param session transfer |
+| Included apps | SSO                                                                          |
+|---------------|------------------------------------------------------------------------------|
+| Android       | via shared cookies                                                           |
+| iOS           | via query param session transfer                                             |  
+| webapp        | consumes session transfer query params, and forwards them to Auth0 authorize |
 
 For more on the native to web SSO flow, see the Auth0 documentation
 on https://auth0.com/docs/authenticate/single-sign-on/native-to-web
@@ -85,13 +86,13 @@ TODO Device binding on both???
 
 ### iOS
 
-Update `./ios/Auth0.plist` with the Auth0 domain and client id. 
+Update `./ios/Auth0.plist` with the Auth0 domain and client id.
 
 Run the app from Xcode.
 
 ### Android
 
-Update `./android/app/src/main/res/values/strings.xml` with the Auth0 domain and client id. 
+Update `./android/app/src/main/res/values/strings.xml` with the Auth0 domain and client id.
 
 Run the app from Android Studio.
 
@@ -107,6 +108,7 @@ dotnet dev-certs https --trust
 ```
 
 Run the web app:
+
 ```bash
 dotnet run
 ```
