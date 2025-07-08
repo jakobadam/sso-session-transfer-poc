@@ -49,10 +49,9 @@ All applications must be connected to the same Database under the Auth0 **Connec
 #### Enabling session transfer
 
 It is currently *not* possible to enable 'session transfer' through the Auth0 UI, instead, the Auth CLI can be used (
-This is
-currently only supported with a commercial Auth0 license.)
+this is currently only supported with a commercial Auth0 license).
 
-For the native Android and iOS applications:
+For the Android and iOS application:
 
 ```bash
 auth0 login

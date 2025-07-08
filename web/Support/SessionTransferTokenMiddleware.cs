@@ -19,12 +19,11 @@ namespace SampleMvcApp.Support;
 /// NOTE: The session transfer middleware is only needed for iOS SSO, as `SFSafariViewController` cannot inject cookies
 /// (right?), whereas Android on the other hand shares cookies between the native app's login session and the web app
 /// rendered inside it.
+///
+/// More: https://auth0.com/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web
 /// </summary>
 public class SessionTransferTokenMiddleware(RequestDelegate next)
 {
-    // NOTE: Name of the cookie is *not* `auth0_session_transfer_token` as documented in the Auth0 docs,
-    // however, it works when the name is `session_transfer_token`?!?!
-    // https://auth0.com/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web
     public const string SessionTransferTokenCookieName = "auth0_session_transfer_token";
     public const string SessionTransferTokenQueryParamName = "session_transfer_token";
 
