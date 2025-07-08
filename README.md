@@ -87,6 +87,7 @@ TODO Device binding on both???
 ### iOS
 
 Update `./ios/Auth0.plist` with the Auth0 domain and client id.
+Update `ios/Sources/Supporting Files/macOS/macOS.entitlements` with the Auth0 domain.
 
 Run the app from Xcode.
 
